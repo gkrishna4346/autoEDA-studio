@@ -18,5 +18,6 @@ def analyze_null_values(df):
         "total_columns": total_columns,
         "total_cells": total_cells,
         "total_missing_cells": total_missing_cells,
-        "overall_missing_percentage": round(overall_missing_percentage, 2)
+        "overall_missing_percent": round(overall_missing_percentage, 2)
     }
+

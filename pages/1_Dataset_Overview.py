@@ -73,7 +73,17 @@ st.divider()
 col1, col2 = st.columns([1,1])
 
 with col1:
-    st.button("⬅ Previous", disabled=True)
-
+    if st.button("⬅ Previous"):
+        st.switch_page("app.py")
 with col2:
-    st.button("Next ➜", disabled=True)
+    if st.button("Next ➜"):
+        st.switch_page("pages/2_Missing_Value_Analysis.py")
+
+st.divider()
+
+st.markdown(
+    "<div style='text-align: center; color: gray; font-size: 14px;'>"
+    "AutoEDA Studio • Built by Gopikrishna"
+    "</div>",
+    unsafe_allow_html=True
+)

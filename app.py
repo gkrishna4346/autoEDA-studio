@@ -82,3 +82,12 @@ if st.session_state.analysis_started:
 
             if st.button("Next ➜"):
                 st.switch_page("pages/1_Dataset_Overview.py")
+
+st.divider()
+
+st.markdown(
+    "<div style='text-align: center; color: gray; font-size: 14px;'>"
+    "AutoEDA Studio • Built by Gopikrishna"
+    "</div>",
+    unsafe_allow_html=True
+)
