@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("📄 Executive Report")
 
-st.caption("Understand your dataset before proceeding with further analysis.")
+st.caption("Generate a consolidated summary of all completed analyses.")
 
 st.divider()
 

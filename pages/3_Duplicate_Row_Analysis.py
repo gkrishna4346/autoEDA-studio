@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("🟢 Duplicate Record Analysis")
 
-st.caption("Understand your dataset before proceeding with further analysis.")
+st.caption("Identify duplicate records that may affect data quality.")
 
 st.divider()
 

@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("📉 Bivariate Analysis")
 
-st.caption("Understand your dataset before proceeding with further analysis.")
+st.caption("Explore relationships between two variables.")
 
 st.divider()
 

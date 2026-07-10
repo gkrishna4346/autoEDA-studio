@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("📍 Outlier Analysis")
 
-st.caption("Understand your dataset before proceeding with further analysis.")
+st.caption("Identify unusual observations that may influence statistical analysis and predictive models.")
 
 st.divider()
 

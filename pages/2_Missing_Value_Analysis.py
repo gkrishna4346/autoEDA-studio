@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("🟢 Missing Value Analysis")
 
-st.caption("Understand your dataset before proceeding with further analysis.")
+st.caption("Evaluate the completeness of your dataset by identifying missing values.")
 
 st.divider()
 

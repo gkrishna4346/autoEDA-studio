@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("📊 Multivariate Analysis")
 
-st.caption("Understand your dataset before proceeding with further analysis.")
+st.caption("Analyze interactions among multiple variables to uncover complex patterns and relationships.")
 
 st.divider()
 

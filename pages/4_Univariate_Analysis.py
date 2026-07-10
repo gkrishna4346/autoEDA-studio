@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("📈 Univariate Analysis")
 
-st.caption("Understand your dataset before proceeding with further analysis.")
+st.caption("Understand the distribution and characteristics of individual variables.")
 
 st.divider()
 

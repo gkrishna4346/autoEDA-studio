@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("🔗 Correlation Analysis")
 
-st.caption("Understand your dataset before proceeding with further analysis.")
+st.caption("Measure the strength and direction of relationships among numerical variables.")
 
 st.divider()
 
