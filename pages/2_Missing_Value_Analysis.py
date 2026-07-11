@@ -26,17 +26,20 @@ st.write (" * Conservative Treatment: Missing values %age >2% and less than 6% :
 
 st.write (" * Aggressive Treatment: Missing values %age >2% and less than 6% : Entries will be deleted ")
 
+
 st.divider()
 
-col1, col2 = st.columns([1,1])
+left, middle, right = st.columns([1, 8, 1])
 
-with col1:
-    if st.button("⬅ Previous"):
+with left:
+    if st.button("◀ Previous"):
         st.switch_page("pages/1_Dataset_Overview.py")
-with col2:
-    if st.button("Next ➜"):
+
+with right:
+    if st.button("Next ▶"):
         st.switch_page("pages/3_Duplicate_Row_Analysis.py")
 
+︎ ︎
 
 st.divider()
 

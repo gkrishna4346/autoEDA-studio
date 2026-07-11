@@ -20,16 +20,20 @@ st.divider()
 
 
 # -----
+
+
 st.divider()
 
-col1, col2 = st.columns([1,1])
+left, middle, right = st.columns([1, 8, 3])
 
-with col1:
-    if st.button("⬅ Previous"):
+with left:
+    if st.button("◀︎︎ Previous"):
         st.switch_page("pages/8_Multivariate_Analysis.py")
-with col2:
-    if st.button("Export Report", disabled=False):
+
+with right:
+    if st.button("💾 Export Report", disabled=False):
         st.write("Report preparation in progress. Please wait...")
+
 
 
 st.divider()

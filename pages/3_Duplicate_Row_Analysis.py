@@ -19,17 +19,21 @@ st.write(" * Duplicate Record treatment will be decided based on the percentage 
 st.write(" * Since there are duplicate records in your current dataset, No Analysis will be performed in this stage.")
 
 
+
+
+
 st.divider()
 
-col1, col2 = st.columns([1,1])
+left, middle, right = st.columns([1, 8, 1])
 
-with col1:
-    if st.button("⬅ Previous"):
+with left:
+    if st.button("◀ Previous"):
         st.switch_page("pages/2_Missing_Value_Analysis.py")
-with col2:
-    if st.button("Next ➜"):
-        st.switch_page("pages/4_Univariate_Analysis.py")
 
+with right:
+    if st.button("Next ▶︎"):
+        st.switch_page("pages/4_Univariate_Analysis.py")
+︎
 
 st.divider()
 

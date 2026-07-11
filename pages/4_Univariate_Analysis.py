@@ -75,13 +75,14 @@ st.divider()
 left, middle, right = st.columns([1, 8, 1])
 
 with left:
-    if st.button("⬅ Previous"):
+    if st.button("◀ Previous"):
         st.switch_page("pages/3_Duplicate_Row_Analysis.py")
 
 with right:
-    if st.button("Next ➜"):
+    if st.button("Next ▶︎"):
         st.switch_page("pages/5_Outlier_Analysis.py")
 
+︎
 st.divider()
 
 st.markdown(

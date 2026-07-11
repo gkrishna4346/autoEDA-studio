@@ -89,11 +89,20 @@ with right:
 
 st.divider()
 
-numeric_summary = df.describe().transpose()
 
-categorical_summary = df.select_dtypes(
+
+categorical_df = df.select_dtypes(
     include=["object", "category"]
-).describe().transpose()
+)
+
+if not categorical_df.empty:
+    categorical_summary = (
+        categorical_df
+        .describe()
+        .transpose()
+    )
+else:
+    categorical_summary = None
 
 numeric_summary = df.describe().transpose()
 
@@ -111,15 +120,17 @@ numeric_summary["count"] = (
     .astype(int)
 )
 
-categorical_summary["count"] = (
-    categorical_summary["count"]
-    .astype(int)
-)
+if categorical_summary is not None:
 
-categorical_summary["freq"] = (
-    categorical_summary["freq"]
-    .astype(int)
-)
+    categorical_summary["count"] = (
+        categorical_summary["count"]
+        .astype(int)
+    )
+
+    categorical_summary["freq"] = (
+        categorical_summary["freq"]
+        .astype(int)
+    )
 
 
 left, center, right = st.columns([2, 8, 2])
@@ -134,19 +145,28 @@ left, center, right = st.columns([3, 6, 3])
 
 with center:
     st.subheader("🔤 Categorical Statistical Summary")
-    st.table(categorical_summary)
+
+    if categorical_summary is not None:
+        st.table(categorical_summary)
+    else:
+        st.info("ℹ️ No categorical columns found in the dataset.")
+
 
 
 st.divider()
 
-col1, col2 = st.columns([1,1])
+left, middle, right = st.columns([1, 8, 1])
 
-with col1:
-    if st.button("⬅ Previous"):
+with left:
+    if st.button("◀︎ Previous"):
         st.switch_page("app.py")
-with col2:
-    if st.button("Next ➜"):
+
+with right:
+    if st.button("Next ▶︎"):
         st.switch_page("pages/2_Missing_Value_Analysis.py")
+
+
+
 
 st.divider()
 

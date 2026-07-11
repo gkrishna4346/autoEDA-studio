@@ -80,7 +80,7 @@ if st.session_state.analysis_started:
 
             st.write(f"**Columns Detected:** {df.shape[1]}")
 
-            if st.button("Next ➜"):
+            if st.button("Next ▶︎"):
                 st.switch_page("pages/1_Dataset_Overview.py")
 
 st.divider()
