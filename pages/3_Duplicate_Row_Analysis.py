@@ -33,7 +33,8 @@ with left:
 with right:
     if st.button("Next ▶︎"):
         st.switch_page("pages/4_Univariate_Analysis.py")
-︎
+
+
 
 st.divider()
 

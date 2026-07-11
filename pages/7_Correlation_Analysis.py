@@ -34,8 +34,6 @@ with right:
     if st.button("Next ▶"):
         st.switch_page("pages/8_Multivariate_Analysis.py")
 
-︎ ︎
-
 st.divider()
 
 st.markdown(

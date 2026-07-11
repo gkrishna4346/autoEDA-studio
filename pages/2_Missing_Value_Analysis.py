@@ -39,8 +39,6 @@ with right:
     if st.button("Next ▶"):
         st.switch_page("pages/3_Duplicate_Row_Analysis.py")
 
-︎ ︎
-
 st.divider()
 
 st.markdown(

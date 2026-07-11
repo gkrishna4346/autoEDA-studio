@@ -35,7 +35,6 @@ with right:
         st.write("Report preparation in progress. Please wait...")
 
 
-
 st.divider()
 
 st.markdown(

@@ -34,7 +34,7 @@ with right:
     if st.button("Next ▶︎"):
         st.switch_page("pages/6_Bivariate_Analysis.py")
 
-︎
+
 st.divider()
 
 st.markdown(

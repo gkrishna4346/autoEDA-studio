@@ -34,7 +34,6 @@ with right:
     if st.button("Next ▶︎"):
         st.switch_page("pages/7_Correlation_Analysis.py")
 
-︎
 
 st.divider()
 
