@@ -18,14 +18,14 @@ st.write(" * Missing values treatment will be decided based on the percentage of
 
 st.write(" * Since there are no missing values in your current dataset, No Analysis will be performed in this stage.")
 
-st.write(" * In Future if missing values observed, treatment will be as given below.")
+st.success(
+    "📚 **Need help deciding?**\n\n"
+    "Explore the **Missing Value Playbook** to understand each treatment technique, "
+    "its advantages, limitations, practical examples, and recommended use cases."
+)
 
-st.write (" * No Treatment: Missing values %age <=2% : Data will be left as is ")
-
-st.write (" * Conservative Treatment: Missing values %age >2% and less than 6% : Data will be imputed by mean/median based on the variance ")
-
-st.write (" * Aggressive Treatment: Missing values %age >2% and less than 6% : Entries will be deleted ")
-
+if st.button("📖 Open Playbook"):
+    st.switch_page("pages/10_Missing_Value_Playbook.py")
 
 st.divider()
 
