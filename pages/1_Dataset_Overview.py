@@ -1,12 +1,14 @@
 import streamlit as st
 
-from analysis_engine.metadata import generate_metadata
+from analysis_engine.dataset_metadata import generate_metadata
 
-st.set_page_config(
-    page_title="Dataset Overview",
-    page_icon="📊",
-    layout="wide"
+from utils.session_manager import (
+    initialize_session,
+    is_project_active,
+    get_working_dataframe
 )
+
+initialize_session()
 
 st.title("📊 Dataset Overview")
 
@@ -15,15 +17,17 @@ st.caption("Understand your dataset before proceeding with further analysis.")
 st.divider()
 
 
-if "df" not in st.session_state:
+if not is_project_active():
 
-    st.warning("⚠️ Please upload a dataset first.")
+    st.warning("⚠️ No active project found.")
+
+    st.switch_page("app.py")
 
     st.stop()
 
-df = st.session_state["df"]
+df = get_working_dataframe()
 
-file_name = st.session_state["file_name"]
+file_name = st.session_state.get("file_name", "")
 
 metadata = generate_metadata(df)
 
@@ -171,7 +175,7 @@ with right:
 st.divider()
 
 st.markdown(
-    "<div style='text-align: center; color: gray; font-size: 14px;'>"
+    "<div style='text-align:left; margin-left:20px; color: gray; font-size: 14px;'>"
     "AutoEDA Studio • Built by Gopikrishna"
     "</div>",
     unsafe_allow_html=True

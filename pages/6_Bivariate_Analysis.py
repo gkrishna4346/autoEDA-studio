@@ -1,6 +1,6 @@
 import streamlit as st
 
-from analysis_engine.metadata import generate_metadata
+from analysis_engine.dataset_metadata import generate_metadata
 
 st.set_page_config(
     page_title="Bivariate Analysis",
